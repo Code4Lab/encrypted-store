@@ -8,7 +8,7 @@ import Middleware from './middleware';
 
 // "SecretKeyWord" => Base64 => SHA1 => "a7d329d37fac06686a3f306e7be7c716b3411d3a"
 const encryptor = createEncryptor({
-    secretKey: 'a7d329d37fac06686a3f306e7be7c716b3411d3a'
+    secretKey: process.env.REACT_APP_SECRET_KEY || 'a7d329d37fac06686a3f306e7be7c716b3411d3a'
 });
 
 const persistedReducer = persistReducer({
